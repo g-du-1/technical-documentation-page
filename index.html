@@ -233,6 +233,16 @@ $( '#js-menu a' ).on("click", function(){
   $('#js-menu').removeClass('active');
 });
 
+$(document).click(function (e) {
+    e.stopPropagation();
+    var container = $(".nav");
+
+    //check if the clicked area is .nav or not
+    if (container.has(e.target).length === 0) {
+        $('#js-menu').removeClass('active');
+    }
+})
+
 $( '#title-scrolltop' ).on("click", function(){
   $('#js-menu').removeClass('active');
 });
