@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link type="text/css" rel="stylesheet" href="normalize.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<title>Technical Documentation Page</title>
+
+<!-- <link rel="stylesheet" href="style.css"> -->
+<!-- Test script doesn't work with external css for some reason -->
+
+<style>
+
+/* Mobile first*/
+
+html,
+body { 
+  font-family: 'Josefin Sans', sans-serif;
+  height:100%;
+  overflow: auto;
+  word-break: break-word;
+}
+
+/* Nav menu */
+
+.nav {
+  background-color: #f1f1f1;
+  border: 1px solid #00000033;
+  font-size: 1.125rem;
+  position: fixed;
+  width: 100%;
+}
+
+.main-nav {
+  list-style-type: none;
+}
+
+.nav-link,
+.nav-title {
+  color: #000;
+  text-decoration: none;
+}
+
+.main-nav li {
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.nav-header {
+  height: 1.7rem;
+  padding-left: 0.5rem;
+}
+
+.nav-title {
+  display: inline-block;
+  font-size: 1.3rem;
+  height: 1.7rem;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: calc(100% - 3rem);
+}
+
+.navbar-toggle {
+  color: #000;
+  cursor: pointer;
+  font-size: 1.5rem;
+  height: 1.7rem;
+  position: absolute;
+  right: 0.5rem;
+  top: 0;
+}
+
+.main-nav {
+  display: none;
+  list-style-type: none;
+  padding: 0;
+}
+
+.active {
+  display: block;
+}
+
+.main-header {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.main-section,
+.sources {
+  padding: 2rem 0.5rem 0 0.5rem;
+}
+
+@media screen and (min-width: 53rem) { 
+  .nav {
+    height: 100%;
+    width: 15rem;
+  }
+
+  main {
+    margin-left: 15rem;
+  }
+  
+  .navbar-toggle {
+    display: none;
+  }
+
+  .main-nav {
+    display: block;
+    padding: 0;
+  }
+
+  .nav-title {
+    display: block;
+    height: auto;
+    padding: 0.5rem 0 0 0;
+    text-align: center;
+    width: auto;
+  }
+
+  .nav-header {
+    padding: 0;
+  }
+
+  .main-section,
+  .sources {
+    padding: 0.5rem 0.5rem 2rem 0.5rem;
+  }
+}
+
+</style>
+
+<nav class="nav" id="navbar">
+  <header class="nav-header">
+    <a href="#" class="nav-title">Basic Data Structures</a>
+    <span class="navbar-toggle" id="js-navbar-toggle">
+      <i class="fas fa-bars"></i>
+  </header>
+  <ul class="main-nav" id="js-menu">
+    <li>
+      <a href="#stack" class="nav-link">Stack</a>
+    </li>
+    <li>
+      <a href="#queue" class="nav-link">Queue</a>
+    </li>
+    <li>
+      <a href="#deque" class="nav-link">Deque</a>
+    </li>
+    <li>
+      <a href="#linked_list" class="nav-link">Linked List</a>
+    </li>
+    <li>
+      <a href="#doubly_linked_list" class="nav-link">Doubly Linked List</a>
+    </li>
+  </ul>
+</nav>
+
+<main id="main-doc">
+  <section class="main-section" id="stack">
+    <header class="main-header">Stack</header>
+    <article>
+      <p>A stack is a basic data structure that can be logically thought of as a linear structure represented by a real physical stack or pile, a structure where insertion and deletion of items takes place at one end called top of the stack. The basic concept can be illustrated by thinking of your data set as a stack of plates or books where you can only take the top item off the stack in order to remove things from it. This structure is used all throughout programming.</p>
+      <p>The basic implementation of a stack is also called a LIFO (Last In First Out) to demonstrate the way it accesses data.
+      <p>Basic operations: </p>
+      <li><code>push(item)</code></li>
+      <li><code>pop()</code></li>
+      <li><code>peek()</code></li>
+    </article>
+  </section>
+
+  <section class="main-section" id="queue">
+    <header class="main-header">Queue</header>
+    <article>
+      <p>A queue is a basic data structure that is used throughout programming. You can think of it as a line in a grocery store. The first one in the line is the first one to be served.Just like a queue.</p>
+      <p>A queue is also called a FIFO (First In First Out) to demonstrate the way it accesses data.</p>
+      <p>Basic operations: </p>
+      <li><code>enqueue(item)</code></li>
+      <li><code>dequeue()</code></li>
+      <li><code>isEmpty()</code></li>
+      <li><code>size()</code></li>
+    </article>
+  </section>
+
+  <section class="main-section" id="deque">
+    <header class="main-header">Deque</header>
+    <article>
+      <p>A deque, also known as a double-ended queue, is an ordered collection of items similar to the queue. It has two ends, a front and a rear, and the items remain positioned in the collection. What makes a deque different is the unrestrictive nature of adding and removing items.</p>
+      <p>New items can be added at either the front or the rear. Likewise, existing items can be removed from either end. In a sense, this hybrid linear structure provides all the capabilities of stacks and queues in a single data structure..</p>
+      <p>Basic operations: </p>
+      <li><code>addFront(item)</code></li>
+      <li><code>addRear(item)</code></li>
+      <li><code>removeFront()</code></li>
+      <li><code>removeRear()</code></li>
+      <li><code>isEmpty()</code></li>
+      <li><code>size()</code></li>
+    </article>
+  </section>
+
+  <section class="main-section" id="linked_list">
+    <header class="main-header">Linked List</header>
+    <article>
+      <p>A Linked list is a linear collection of data elements, whose order is not given by their physical placement in memory. Instead, each element points to the next. It is a data structure consisting of a collection of nodes which together represent a sequence.</p>
+      <p>In its most basic form, each node contains: data, and a reference (in other words, a link) to the next node in the sequence. This structure allows for efficient insertion or removal of elements from any position in the sequence during iteration. </p>
+    </article>
+  </section>
+
+  <section class="main-section" id="doubly_linked_list">
+    <header class="main-header">Doubly Linked List</header>
+    <article>
+      <p>A Doubly Linked List is a linked data structure that consists of a set of sequentially linked records called nodes. Each node contains three fields: two link fields (references to the previous and to the next node in the sequence of nodes) and one data field.</p>
+      <p>The beginning and ending nodes' previous and next links, respectively, point to some kind of terminator, typically a sentinel node or null, to facilitate traversal of the list.</p>
+    </article>
+  </section>
+
+  <section class="sources">
+    <p>Wikibooks</p>
+    <p>Wikipedia</p>
+    <p>Problem Solving with Algorithms and Data Structures using Python by Bradley N. Miller, David L. Ranum is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a></p>
+  </section>
+</main>
+
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<script>
+$('#js-navbar-toggle').on('click', function () {
+  $('#js-menu').toggleClass('active');
+});
+
+$( '#js-menu a' ).on("click", function(){
+  $('#js-menu').removeClass('active');
+});
+</script>
+
+</html>
