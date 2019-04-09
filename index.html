@@ -134,7 +134,7 @@ body {
 
 <nav class="nav" id="navbar">
   <header class="nav-header">
-    <a href="#top" class="nav-title">Basic Data Structures</a>
+    <a href="#top" class="nav-title" id="title-scrolltop" >Basic Data Structures</a>
     <span class="navbar-toggle" id="js-navbar-toggle">
       <i class="fas fa-bars"></i>
   </header>
@@ -224,12 +224,16 @@ body {
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
 <script>
-  
+
 $('#js-navbar-toggle').on('click', function () {
   $('#js-menu').toggleClass('active');
 });
 
 $( '#js-menu a' ).on("click", function(){
+  $('#js-menu').removeClass('active');
+});
+
+$( '#title-scrolltop' ).on("click", function(){
   $('#js-menu').removeClass('active');
 });
 
