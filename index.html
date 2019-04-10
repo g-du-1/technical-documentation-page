@@ -12,6 +12,8 @@
 
 <style>
 
+/*csslint box-sizing: false*/
+
 /* Mobile first*/
 
 html,
@@ -19,7 +21,7 @@ body {
   font-family: 'Josefin Sans', sans-serif;
   height:100%;
   overflow: auto;
-  word-break: break-word;
+  word-break: keep-all;
 }
 
 /* Nav menu */
@@ -27,6 +29,7 @@ body {
 .nav {
   background-color: #f1f1f1;
   border: 1px solid #00000033;
+  box-sizing: border-box;
   font-size: 1.125rem;
   position: fixed;
   width: 100%;
@@ -85,10 +88,8 @@ body {
   padding: 2rem 0.5rem 0 0.5rem;
 }
 
-.main-header {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+h3 {
+  margin: 0 0 1rem 0;
 }
 
 @media screen and (min-width: 53rem) { 
@@ -135,6 +136,7 @@ body {
     <a href="#top" class="nav-title" id="title-scrolltop" >Basic Data Structures</a>
     <span class="navbar-toggle" id="js-navbar-toggle">
       <i class="fas fa-bars"></i>
+    </span>
   </header>
   <ul class="main-nav" id="js-menu">
     <li>
@@ -157,64 +159,60 @@ body {
 
 <main id="main-doc">
   <section class="main-section" id="stack">
-    <header class="main-header">Stack</header>
-    <article>
+    <header class="main-header"><h3>Stack</h3></header>
       <p>A stack is a basic data structure that can be logically thought of as a linear structure represented by a real physical stack or pile, a structure where insertion and deletion of items takes place at one end called top of the stack. The basic concept can be illustrated by thinking of your data set as a stack of plates or books where you can only take the top item off the stack in order to remove things from it. This structure is used all throughout programming.</p>
       <p>The basic implementation of a stack is also called a LIFO (Last In First Out) to demonstrate the way it accesses data.
       <p>Basic operations: </p>
-      <li><code>push(item)</code></li>
-      <li><code>pop()</code></li>
-      <li><code>peek()</code></li>
-    </article>
+      <ul>
+        <li><code>push(item)</code></li>
+        <li><code>pop()</code></li>
+        <li><code>peek()</code></li>
+      </ul>
   </section>
 
   <section class="main-section" id="queue">
-    <header class="main-header">Queue</header>
-    <article>
+    <header class="main-header"><h3>Queue</h3></header>
       <p>A queue is a basic data structure that is used throughout programming. You can think of it as a line in a grocery store. The first one in the line is the first one to be served.Just like a queue.</p>
       <p>A queue is also called a FIFO (First In First Out) to demonstrate the way it accesses data.</p>
       <p>Basic operations: </p>
-      <li><code>enqueue(item)</code></li>
-      <li><code>dequeue()</code></li>
-      <li><code>isEmpty()</code></li>
-      <li><code>size()</code></li>
-    </article>
+      <ul>
+        <li><code>enqueue(item)</code></li>
+        <li><code>dequeue()</code></li>
+        <li><code>isEmpty()</code></li>
+        <li><code>size()</code></li>
+      </ul>
   </section>
 
   <section class="main-section" id="deque">
-    <header class="main-header">Deque</header>
-    <article>
+    <header class="main-header"><h3>Deque</h3></header>
       <p>A deque, also known as a double-ended queue, is an ordered collection of items similar to the queue. It has two ends, a front and a rear, and the items remain positioned in the collection. What makes a deque different is the unrestrictive nature of adding and removing items.</p>
       <p>New items can be added at either the front or the rear. Likewise, existing items can be removed from either end. In a sense, this hybrid linear structure provides all the capabilities of stacks and queues in a single data structure..</p>
       <p>Basic operations: </p>
-      <li><code>addFront(item)</code></li>
-      <li><code>addRear(item)</code></li>
-      <li><code>removeFront()</code></li>
-      <li><code>removeRear()</code></li>
-      <li><code>isEmpty()</code></li>
-      <li><code>size()</code></li>
-    </article>
+      <ul>
+        <li><code>addFront(item)</code></li>
+        <li><code>addRear(item)</code></li>
+        <li><code>removeFront()</code></li>
+        <li><code>removeRear()</code></li>
+        <li><code>isEmpty()</code></li>
+        <li><code>size()</code></li>
+        </ul>
   </section>
 
   <section class="main-section" id="linked_list">
-    <header class="main-header">Linked List</header>
-    <article>
+    <header class="main-header"><h3>Linked List</h3></header>
       <p>A Linked list is a linear collection of data elements, whose order is not given by their physical placement in memory. Instead, each element points to the next. It is a data structure consisting of a collection of nodes which together represent a sequence.</p>
       <p>In its most basic form, each node contains: data, and a reference (in other words, a link) to the next node in the sequence. This structure allows for efficient insertion or removal of elements from any position in the sequence during iteration. </p>
-    </article>
   </section>
 
   <section class="main-section" id="doubly_linked_list">
-    <header class="main-header">Doubly Linked List</header>
-    <article>
+    <header class="main-header"><h3>Doubly Linked List</h3></header>
       <p>A Doubly Linked List is a linked data structure that consists of a set of sequentially linked records called nodes. Each node contains three fields: two link fields (references to the previous and to the next node in the sequence of nodes) and one data field.</p>
       <p>The beginning and ending nodes' previous and next links, respectively, point to some kind of terminator, typically a sentinel node or null, to facilitate traversal of the list.</p>
-    </article>
   </section>
 
-  <section class="sources">
+  <div class="sources">
     <p>Sources: Wikibooks, Wikipedia, Problem Solving with Algorithms and Data Structures using Python by Bradley N. Miller, David L. Ranum licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a></p>
-  </section>
+  </div>
 </main>
 
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
