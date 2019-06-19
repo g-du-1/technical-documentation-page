@@ -51,7 +51,7 @@ body {
   white-space: nowrap;
 }
 
-.navbar-toggle {
+.nav-toggle {
   color: #000;
   cursor: pointer;
   font-size: 1.5rem;
@@ -61,13 +61,13 @@ body {
   top: 0;
 }
 
-.main-nav {
+.nav-menu {
   display: none;
   list-style-type: none;
   padding: 0;
 }
 
-.main-nav li {
+.nav-menu li {
   margin: 1rem auto;
   text-align: center;
 }
@@ -85,7 +85,7 @@ body {
 /* Body */
 
 .main-section,
-.sources {
+.main-sources {
   padding: 2rem 0.5rem 0 0.5rem;
 }
 
@@ -111,11 +111,11 @@ h3 {
     width: auto;
   }
 
-  .navbar-toggle {
+  .nav-toggle {
     display: none;
   }
 
-  .main-nav {
+  .nav-menu {
     display: block;
     padding: 0;
   }
@@ -130,7 +130,7 @@ h3 {
   }
 
   .main-section,
-  .sources {
+  .main-sources {
     padding: 0.5rem 1rem 2rem 1rem;
   }
 }
@@ -140,11 +140,11 @@ h3 {
 <nav class="nav" id="navbar">
   <header class="nav-header">
     <a href="#top" class="nav-title" id="title-scrolltop">Basic Data Structures</a>
-    <span class="navbar-toggle" id="js-navbar-toggle">
+    <span class="nav-toggle" id="js-nav-toggle">
       <i class="fas fa-bars"></i>
     </span>
   </header>
-  <ul class="main-nav" id="js-menu">
+  <ul class="nav-menu" id="js-menu">
     <li><a href="#stack" class="nav-link">Stack</a></li>
     <li><a href="#queue" class="nav-link">Queue</a></li>
     <li><a href="#deque" class="nav-link">Deque</a></li>
@@ -206,7 +206,7 @@ h3 {
     <p>The beginning and ending nodes' previous and next links, respectively, point to some kind of terminator, typically a sentinel node or null, to facilitate traversal of the list.</p>
   </section>
 
-  <div class="sources">
+  <div class="main-sources">
     <p>Sources: Wikibooks, Wikipedia, Problem Solving with Algorithms and Data Structures using Python by Bradley N. Miller, David L. Ranum licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a></p>
   </div>
 </main>
@@ -215,7 +215,7 @@ h3 {
 
 <script>
 
-$('#js-navbar-toggle').on('click', function () {
+$('#js-nav-toggle').on('click', function () {
   $('#js-menu').toggleClass('active');
 });
 
